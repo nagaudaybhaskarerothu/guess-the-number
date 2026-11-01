@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.game-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.game-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px 30px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.game-icon {
+  font-size: 55px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  color: #252b48;
+  font-size: 27px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: #777d96;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.attempts-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  border-radius: 12px;
+  background: #f0f2ff;
+  color: #4f46e5;
+}
+
+.attempts-box span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.attempts-box strong {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e1e4f0;
+  border-radius: 12px;
+  outline: none;
+  text-align: center;
+  font-family: inherit;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.guess-button,
+.restart-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.guess-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+}
+
+.guess-button:hover:not(:disabled),
+.restart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
+}
+
+.guess-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  min-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 5px;
+  margin-top: 18px;
+  color: #555b75;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.message.success {
+  color: #159447;
+  background: #e8fff0;
+  border-radius: 10px;
+}
+
+.message.finished {
+  color: #159447;
+}
+
+.restart-button {
+  margin-top: 10px;
+  background: #16a34a;
+}
+
+.footer-text {
+  margin-top: 25px;
+  color: #a0a5b8;
+  font-size: 11px;
+}
+
+@media (max-width: 480px) {
+  .game-card {
+    padding: 28px 20px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+}
